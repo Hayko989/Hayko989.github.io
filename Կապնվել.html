@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Կապնվել</title>
+    <style>
+        :root {
+            --primary-color: #2e8b57;
+            --secondary-color: #3aaf70;
+            --dark-color: #1a3e1a;
+            --light-color: #f5f5f5;
+            --accent-color: #ff7f50;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: var(--light-color);
+            transition: all 0.3s ease;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--accent-color);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            animation: fadeIn 1s ease;
+        }
+        
+        nav {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            background: rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        
+        nav a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        main {
+            padding: 2rem;
+            max-width: 1000px;
+            margin: 0 auto 100px;
+            animation: slideUp 0.8s ease;
+        }
+        
+        .contact-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .contact-info, .contact-form {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+        }
+        
+        .contact-info h3, .contact-form h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.5rem;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        form {
+            display: grid;
+            gap: 1rem;
+        }
+        
+        input, textarea {
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        button {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+        
+        button:hover {
+            background: var(--dark-color);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        footer {
+            background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 100;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .contact-section {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            nav {
+                gap: 0.8rem;
+            }
+            
+            nav a {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Կապնվել մեզ հետ</h1>
+        <nav>
+            <a href="Գլխավոր.html">Գլխավոր</a>
+            <a href="Մեր Մասին.html">Մեր մասին</a>
+            <a href="Կապնվել.html">Կապնվել</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contact-section">
+            <div class="contact-info">
+                <h3>Կոնտակտային տվյալներ</h3>
+                
+                <div class="contact-method">
+                    <div class="contact-icon"></div>
+                    <div>
+                        <strong>Էլեկտրոնային հասցե</strong>
+                        <p>babayanhayk699@gmail.com</p>
+                    </div>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="contact-icon"></div>
+                    <div>
+                        <strong>Instagram</strong>
+                        <p>babayan_hayk_</p>
+                    </div>
+                </div>
+                
+                <div class="contact-method">
+                    <div class="contact-icon"></div>
+                    <div>
+                        <strong>Telegram</strong>
+                        <p>@Hayk_Babayan7363</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Ուղարկեք մեզ հաղորդագրություն ( պետք չի )</h3>
+                <form id="contactForm">
+                    <input type="text" placeholder="Անուն" required>
+                    <input type="email" placeholder="Էլեկտրոնային հասցե" required>
+                    <input type="text" placeholder="Թեմա">
+                    <textarea placeholder="Ձեր հաղորդագրությունը..." required></textarea>
+                    <button type="submit">ՈՒՂԱՐԿԵԼ</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+         <p>Այստեղ կարող էր լինել ձեր գովազդը</p>
+        <p>( պետք չի )</p>
+    </footer>
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Շնորհակալություն։ Ձեր հաղորդագրությունը ստացվել է։ Մենք կպատասխանենք հնարավորինս շուտ։');
+            this.reset();
+        });
+    </script>
+</body>
+</html>

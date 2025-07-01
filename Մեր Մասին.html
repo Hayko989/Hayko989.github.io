@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="hy">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Մեր Մասին</title>
+    <style>
+        :root {
+            --primary-color: #2e8b57;
+            --secondary-color: #3aaf70;
+            --dark-color: #1a3e1a;
+            --light-color: #f5f5f5;
+            --accent-color: #ff7f50;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: var(--light-color);
+            transition: all 0.3s ease;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--accent-color);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            animation: fadeIn 1s ease;
+        }
+        
+        nav {
+            margin-top: 1.5rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            background: rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+        
+        nav a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        main {
+            padding: 2rem;
+            max-width: 1000px;
+            margin: 0 auto 100px;
+            animation: slideUp 0.8s ease;
+        }
+        
+        .about-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+        
+        .about-section h2 {
+            color: var(--primary-color);
+            margin-top: 0;
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+        
+        .mission-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .mission-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s ease;
+            border-top: 4px solid var(--accent-color);
+        }
+        
+        .mission-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .mission-card h3 {
+            color: var(--dark-color);
+            margin-top: 0;
+        }
+        
+        footer {
+            background: linear-gradient(135deg, var(--dark-color), var(--primary-color));
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 100;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { 
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to { 
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            nav {
+                gap: 0.8rem;
+            }
+            
+            nav a {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
+            }
+            
+            .mission-cards {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Իմ Մասին</h1>
+        <nav>
+            <a href="Գլխավոր.html">Գլխավոր</a>
+            <a href="Մեր Մասին.html">Մեր մասին</a>
+            <a href="Կապնվել.html">Կապնվել</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="about-section">
+            <h2>Իմ պատմությունը</h2>
+            <p>Ես ուզում եմ սովորել սարքել հասարակ սայթեր: Այս կայքը իմ առաջին քայլն է վեբ-ծրագրավորման աշխարհում: Սկսելով հասարակ HTML և CSS-ից, ես աստիճանաբար ավելացնում եմ նոր հնարավորություններ և տեխնոլոգիաներ:</p>
+        </section>
+        
+        <div class="mission-cards">
+            <div class="mission-card">
+                <h3>Իմ նպատակը</h3>
+                <p>Ստեղծել պարզ, բայց գործառական կայքեր, որոնք կօգնեն սկսնակներին սովորել վեբ-ծրագրավորում:</p>
+            </div>
+            
+            <div class="mission-card">
+                <h3>Իմ մոտեցումը</h3>
+                <p>Ես հավատում եմ կայացման ուժին ( էսի հավայի ասեցի , չհավատաք ): Յուրաքանչյուր նախագիծ նոր հնարավորություն է սովորելու և կատարելագործվելու համար:</p>
+            </div>
+            
+            <div class="mission-card">
+                <h3>Ապագայի ծրագրեր</h3>
+                <p>Շարունակել ուսումնասիրել JavaScript և այլ ժամանակակից տեխնոլոգիաներ ավելի ինտերակտիվ կայքեր ստեղծելու համար:</p>
+            </div>
+        </div>
+        
+        <section class="about-section">
+            <h2>Ինչու՞ վեբ-ծրագրավորում</h2>
+            <p>Վեբ-ծրագրավորումը թույլ է տալիս ստեղծագործել և կիսվել աշխատանքիդ արդյունքներով ամբողջ աշխարհի հետ: Այն համատեղում է տեխնիկական հմտությունները և ստեղծագործական մտածողությունը:</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Այստեղ կարող էր լինել ձեր գովազդը</p>
+        <p>( պետք չի )</p>
+    </footer>
+</body>
+</html>
